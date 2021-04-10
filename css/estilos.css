@@ -1,0 +1,120 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /** reset para rems **/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+/** Globales = lo que se ocupara más de una vez **/
+img{
+    max-width: 100%; /**Ajusta la imagen en su totalidad a la pantalla, pero sin que supere a esta**/
+ }
+ .contenedor{
+     max-width: 120rem;
+     margin: 0 auto; /* arriba derecha = abajo izquierda */
+ }
+ 
+ h1{ 
+     font-size: 3.8rem;
+ }
+ 
+ h2{
+     font-size: 3.4rem;
+ }
+ 
+ h3{
+     font-size: 3rem;
+ }
+ 
+ h4{
+     font-size: 2.6rem;
+ }
+
+ /** Utilidades **/
+.seccion{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fw-300{
+    font-weight: 300; /*clase que define el ancho de la fuente a 300 */
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+.contenido-centrado{
+    max-width: 800px;
+}
+
+/* Header */
+.site-header{
+    background-color: #6d6d6d;
+    padding: 1rem 0 3rem 0;
+}
+
+.site-header.inicio{
+    background-image: url(../img/header.jpg);
+    background-position: center center; /* posiciona la imagen desde el centro */
+    background-size: cover; /* ocupa todo el espacio disponible, manteniendo las proporciones */
+    height: 50vh; /*mide el tamaño de la pantalla; 1vh = 1% de la altura del viewport */
+    min-height: 60rem;  /* permite asignar una altura minima a la imagen, 
+    para evitar que vh muestre una imagen demasiado pequeña*/
+}
+
+.contenido-header{
+    height: 100%;
+    display: flex ;
+    flex-direction: column; /* cambia la direccion del flex hacia vertical */
+    justify-content: space-between;
+}
+
+.contenido-header h1{
+    color: white;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    line-height: 2;   
+}
+.barra{
+    display: flex;  /** metodo estandarizado para posicionar elementos**/
+    justify-content: center; /** permite alinear horizontalmente, reparte el espacio de enmedio entre los elementos **/
+    align-items: center; /** permite alinear los elementos verticalmente **/
+    padding-top: 3rem; /* margin crearia una barra blanca ya que la imagen esta en la barra, por eso ocupamos padding en este caso */
+}
+
+
+/* Navegacion */
+.navegacion {
+    width: 50rem;
+}
+
+.navegacion a {
+    color: rgb(120, 221, 26);
+    text-decoration: none; /** elimina el subrayado que crea por defecto los enlaces **/
+    font-size: 1.8rem;
+    margin-right: 2rem;
+    font-family: sans-serif;
+}
+
+.navegacion a img{
+    max-width: 5%;
+}
+
+.navegacion a:hover{ /** pseudo selector mas comun, cuando el puntero esta encima **/
+    color: #d6a51e;
+}
+
+.navegacion a:last-of-type{ /* pseudo-selector que setea parametros al ultimo elemento de la clase en cuestion*/
+    margin-right: 0rem;
+}
+
+
