@@ -18,7 +18,7 @@ img{
     max-width: 100%; /**Ajusta la imagen en su totalidad a la pantalla, pero sin que supere a esta**/
  }
  .contenedor{
-     max-width: 120rem;
+     max-width: 120rem; /* centrar el contenido de todo el sitio*/
      margin: 0 auto; /* arriba derecha = abajo izquierda */
  }
  
@@ -58,19 +58,21 @@ img{
 
 /* Header */
 .site-header{
-    background-color: #6d6d6d;
-    padding: 1rem 0 3rem 0;
+    background-color: #333333;
+    padding: 0 0 3rem 0;
 }
 
 .site-header.inicio{
     background-image: url(../img/header.jpg);
     background-position: center center; /* posiciona la imagen desde el centro */
     background-size: cover; /* ocupa todo el espacio disponible, manteniendo las proporciones */
-    height: 50vh; /*mide el tamaño de la pantalla; 1vh = 1% de la altura del viewport */
-    min-height: 60rem;  /* permite asignar una altura minima a la imagen, 
+    height: 60vh; /*mide el tamaño de la pantalla; 1vh = 1% de la altura del viewport */
+    min-height: 30rem;  /* permite asignar una altura minima a la imagen, 
     para evitar que vh muestre una imagen demasiado pequeña*/
 }
-
+.contenedor.contenido-header{
+    max-width: unset;
+}
 .contenido-header{
     height: 100%;
     display: flex ;
@@ -79,38 +81,36 @@ img{
 }
 
 .contenido-header h1{
-    color: white;
+    color: #7fff00;
     padding-bottom: 2rem;
     max-width: 60rem;
     line-height: 2;   
 }
+
 .barra{
     display: flex;  /** metodo estandarizado para posicionar elementos**/
-    justify-content: center; /** permite alinear horizontalmente, reparte el espacio de enmedio entre los elementos **/
+    background-color: #333333;
+    padding: 0 3rem;
+    justify-content: space-between; /** permite alinear horizontalmente, reparte el espacio de enmedio entre los elementos **/
     align-items: center; /** permite alinear los elementos verticalmente **/
-    padding-top: 3rem; /* margin crearia una barra blanca ya que la imagen esta en la barra, por eso ocupamos padding en este caso */
+    height: 5rem;
 }
 
+.barra a {
+    padding-top: 14rem;
+}
 
 /* Navegacion */
-.navegacion {
-    width: 50rem;
-}
-
 .navegacion a {
-    color: rgb(120, 221, 26);
+    color:chartreuse;
     text-decoration: none; /** elimina el subrayado que crea por defecto los enlaces **/
     font-size: 1.8rem;
     margin-right: 2rem;
     font-family: sans-serif;
 }
 
-.navegacion a img{
-    max-width: 5%;
-}
-
 .navegacion a:hover{ /** pseudo selector mas comun, cuando el puntero esta encima **/
-    color: #d6a51e;
+    color: #ff56e3;
 }
 
 .navegacion a:last-of-type{ /* pseudo-selector que setea parametros al ultimo elemento de la clase en cuestion*/
