@@ -8,7 +8,7 @@ html{
 }
 
 body{
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 1.6rem;
     line-height: 2rem;
 }
@@ -56,6 +56,33 @@ img{
     max-width: 800px;
 }
 
+/**Botones **/
+.boton{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem; /* se aplica al href gracias al display: inline-block, de lo contrario esta linea no afectaria al href */ 
+    display: inline-block;
+    text-align: center;
+    border: none;
+}
+
+.boton:hover{
+    cursor: pointer; /* Cambia el cursor cuando se situa en un boton */
+}
+
+.boton-verde{
+    background-color: #71B100;
+    margin-top: 0;
+}
+
+.boton-verde:hover{
+    background-color: #ff56e3;
+    color: #ffa2f0;
+}
+
 /* Header */
 .site-header{
     background-color: #333333;
@@ -81,10 +108,7 @@ img{
 }
 
 .contenido-header h1{
-    color: #7fff00;
-    padding-bottom: 2rem;
-    max-width: 60rem;
-    line-height: 2;   
+    color: #71B100;
 }
 
 .barra{
@@ -102,7 +126,7 @@ img{
 
 /* Navegacion */
 .navegacion a {
-    color:chartreuse;
+    color:#7fff00;
     text-decoration: none; /** elimina el subrayado que crea por defecto los enlaces **/
     font-size: 1.8rem;
     margin-right: 2rem;
@@ -117,4 +141,226 @@ img{
     margin-right: 0rem;
 }
 
+/* Seccion Reseñas */
+.seccion-reseñas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.seccion-reseñas.contenedor.seccion{
+    padding: 0 3rem;
+}
 
+.entrada-reseña{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.entrada-reseña:last-of-type{
+    margin-bottom: 0;
+}
+
+.entrada-reseña .imagen{
+    flex-basis: 40%;
+}
+
+.entrada-reseña .texto-entrada{
+    flex-basis: calc(60% - 3rem);
+}
+
+.texto-entrada a{
+    color: #000000;
+    text-decoration: none;
+}
+
+.texto-entrada h4{
+    margin: 0;
+    line-height: 1.4;
+}
+.texto-entrada h4:hover{
+    color: #ff56e3;
+}
+
+.texto-entrada h4::after{
+    content: '';
+    display:block;
+    width: 15rem;
+    height: .5rem;
+    background-color: #71B100;
+    margin-top: 1rem;
+}
+
+.texto-entrada span{
+    color: #ff56e3;
+}
+
+.texto-entrada p{
+    text-align: justify;
+}
+
+.ver-todas{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Banner Lanzamientos */
+.imagen-lanzamientos{
+    background-image: url(../img/contenedor-lanz.jpeg);
+    height: 40rem;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    padding-bottom: 3rem;
+    align-items: flex-end;
+}
+
+.contenido-lanzamientos{
+    flex: 1; /* factor de crecimiento, divide el total de los pixeles en la cantidad n de elementos para asignar espacio por igual a todos */ 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenido-lanzamientos p{
+    font-size: 1.8rem;
+}
+
+/** Footer **/
+.site-footer{
+    background-color: #333333;
+    margin: 0; /**quitamos el margen que agrega la clase 'seccion' **/
+    align-items: center;
+}
+
+.contenedor-footer{
+    padding: 2rem 0rem; /**arriba abajo izquierda derecha**/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright{
+    margin: 0;
+    color:#71B100; 
+}
+
+.datos-footer{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+}
+
+.dato-footer h4{
+    margin: 0;
+    text-align: center;
+    color: #71B100;
+    font-size: 1.2rem;
+    line-height: .5rem;
+}
+.dato-footer p{
+    text-align: center;
+    color: #71B100;
+    font-size:1.2rem;
+    line-height: .5rem;
+
+}
+.dato-footer h4::after{
+    content: '';
+    display:block;
+    width: 20rem;
+    height: .2rem;
+    background-color: #ff56e3;
+    margin-top: 1rem;
+    margin-left: auto; /* centra la barra decorativa */
+    margin-right: auto; /* centra la barra decorativa */
+}
+
+/** PAGINAS INTERNAS **/
+/**Nosotros**/
+.fondo-nosotros{
+    background-image: url(../img/fondo-nosotros.jpg);
+    background-position: center center; /* posiciona la imagen desde el centro */
+    background-size: cover;
+}
+.contenedor.contenedor-nosotros{
+    background-color: #1f1f1f;
+}
+.contenedor-nosotros{
+    height: 100%;
+    display: flex ;
+    flex-direction: column; /* cambia la direccion del flex hacia vertical */
+    padding:0 2rem;
+}
+
+.banner-nosotros{
+    background-image: url(../img/banner-nosotros.jpg);
+    background-position: center center; /* posiciona la imagen desde el centro */
+    background-size: cover; /* ocupa todo el espacio disponible, manteniendo las proporciones */
+    height: 60vh; /*mide el tamaño de la pantalla; 1vh = 1% de la altura del viewport */
+    min-height: 30rem;  /* permite asignar una altura minima a la imagen, 
+    para evitar que vh muestre una imagen demasiado pequeña*/
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.banner-nosotros h2{
+    color:#71B100;
+    padding-right: 2rem;
+}
+.descripcion-nosotros{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.block-desc-nosotros{
+    flex-basis: calc(33.3% - 2rem); /* calcula el 33.3% del total y le resta 10px */
+    text-align: center; /* alinea texto al centro */
+}
+.block-desc-nosotros p{
+    color: #71B100;
+    text-align: justify;
+}
+.block-desc-nosotros img{
+    width: 100%;
+    height: auto;
+    padding: 3rem;
+}
+
+.contenedor-avatares{
+    display: flex;
+    justify-content: space-between;
+}
+.avatar{
+    flex-basis: calc(33.3% - 1rem); /* calcula el 33.3% del total y le resta 10px */
+    text-align: center; /* alinea texto al centro */
+}
+.avatar img{
+    height: 55%;
+    width: 45%;
+}
+
+.avatar h4{
+    color:#71B100;
+    font-size: 2rem;
+}
+
+.avatar h4::before{
+    content: '';
+    display:block;
+    width: 20rem;
+    height: .2rem;
+    background-color: #ff56e3;
+    margin: 1rem 0;
+    margin-left: auto; /* centra la barra decorativa */
+    margin-right: auto; /* centra la barra decorativa */
+}
+
+
+  
+/**Reseñas**/
+
+/**Opiniones**/
+
+/**Lanzamientos**/
