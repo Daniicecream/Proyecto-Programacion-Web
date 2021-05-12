@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joystick Libre!: Reseñas</title>
+    <title>Joystick Libre!: Contactanos</title>
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
     <!-- Googlefont -->
@@ -15,6 +15,9 @@
     <link rel="stylesheet" type="text/CSS" href="css/estilos.css"> <!-- hoja de estilos -->
 
     <link rel="shortcut icon" href="img/shortcut.png" type="image/x-icon">
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
 
@@ -32,21 +35,37 @@
                     <a href="nosotros.html">Nosotros</a>
                     <a href="reseñas.html">Reseñas</a>
                     <a href="opiniones.html">Opiniones</a>
-                    <a href="lanzamientos.html">Lanzamientos</a>
+                    <a href="contacto.html">Contactanos</a>
                 </nav>
             </div>
-            <h1>Portal hecho por gamers para gamers :B</h1>
+            <h1 class="fw-300">Portal hecho por gamers para gamers :B</h1>
         </div>
         <!--contenedor-->
     </header>
 
-    <section class="contenedor seccion">
+    <main class="contenedor seccion">
+        <h3 class="centrar-texto">Contacto</h3>
 
-        <h1>En mántenimiento... </h1>
-        <h2>Prueba Commit :3</h2>
-        <h2>prueba git hub uwu</h2>
-        <img src="img/reseña.png" alt="">
-    </section>
+        <div class="contacto-bg"></div>
+        <form class="formulario">
+            <div class="campo">
+                <label class="campo_label" for="nombre">Nombre:</label>
+                <input class="campo_input" type="text" placeholder="Tu nombre..." id="nombre">
+            </div>
+            <div class="campo">
+                <label class="campo_label" for="email">Email:</label>
+                <input class="campo_input" type="email" placeholder="joysticklibre@gmail.com" id="email">
+            </div>
+            <div class="campo">
+                <label class="campo_label" for="mensaje">Mensaje:</label>
+                <textarea class="campo_input campo_input--textarea" id="mensaje"></textarea>
+            </div>
+            <div class="campo">
+                <input type="submit" value="Enviar" class="boton boton-verde">
+            </div>
+        </form>
+
+    </main>
 
     <footer class="site-footer seccion">
         <div class="contenedor contenedor-footer">
@@ -54,7 +73,7 @@
                 <a href="nosotros.html">Nosotros</a>
                 <a href="reseñas.html">Reseñas</a>
                 <a href="opiniones.html">Opiniones</a>
-                <a href="lanzamientos.html">Lanzamientos</a>
+                <a href="contacto.html">Contactanos</a>
             </nav>
             <p class="copyright">Joystick Libre 2021 - Todos los Derechos Reservados &copy;</p>
         </div>
@@ -75,5 +94,4 @@
         </div>
     </footer>
 </body>
-
 </html>

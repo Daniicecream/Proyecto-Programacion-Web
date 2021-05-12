@@ -147,6 +147,7 @@ img{
     flex-direction: column;
     justify-content: space-between;
 }
+
 .seccion-reseñas.contenedor.seccion{
     padding: 0 3rem;
 }
@@ -357,10 +358,42 @@ img{
     margin-right: auto; /* centra la barra decorativa */
 }
 
-
-  
 /**Reseñas**/
 
 /**Opiniones**/
 
-/**Lanzamientos**/
+/**Contacto**/
+.contacto-bg{
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario{
+    background-color: #ffffff;
+    margin: -10rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo_label{
+    flex: 0 0 9rem; /*factor de crecimiento 0
+                    tampoco se va a hacer más pequeño
+                    el tamaño base sera de 9rem*/
+}
+
+.campo_input{
+    flex: 1; /*indica que tome todo el espacio disponible*/
+    border: 1 solid #333333;
+}
+
+.campo_input--textarea{
+    height: 20rem;
+    
+}
