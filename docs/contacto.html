@@ -7,17 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joystick Libre!: Contactanos</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
     <!-- Googlefont -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/normalize.css"> <!-- hoja de estilos de normalizacion -->
+    <!-- hoja de estilos de normalizacion -->
+    <link rel="stylesheet" href="css/normalize.css">
 
-    <link rel="stylesheet" type="text/CSS" href="css/estilos.css"> <!-- hoja de estilos -->
+    <!-- hoja de estilos -->
+    <link rel="stylesheet" type="text/CSS" href="css/estilos.css">
 
+    <!-- Imagen minilogo -->
     <link rel="shortcut icon" href="img/shortcut.png" type="image/x-icon">
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"
+        integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"
+        integrity="sha512-6Uv+497AWTmj/6V14BsQioPrm3kgwmK9HYIyWP+vClykX52b0zrDGP7lajZoIY1nNlX4oQuh7zsGjmF7D0VZYA=="
+        crossorigin="anonymous"></script>
 
 </head>
 
@@ -35,30 +44,51 @@
                     <a href="nosotros.html">Nosotros</a>
                     <a href="reseñas.html">Reseñas</a>
                     <a href="opiniones.html">Opiniones</a>
+                    <a href="armas.html">Armas</a>
                     <a href="contacto.html">Contactanos</a>
                 </nav>
             </div>
-            <h1 class="fw-300">Portal hecho por gamers para gamers :B</h1>
         </div>
         <!--contenedor-->
     </header>
 
-    <main class="contenedor seccion">
-        <h3 class="centrar-texto">Contacto</h3>
+    <main class="contenedor seccion contenido-contacto">
+        <h1 class="centrar-texto fw-300">Contacto</h1>
 
         <div class="contacto-bg"></div>
-        <form class="formulario">
+        <form class="formulario" id="contact-form">
+            <div class="campo">
+                <label class="campo_label" for="nick">Nick:</label>
+                <input class="campo_input" type="text" placeholder="Tu nick..." id="nick" name="nick">
+            </div>
             <div class="campo">
                 <label class="campo_label" for="nombre">Nombre:</label>
-                <input class="campo_input" type="text" placeholder="Tu nombre..." id="nombre">
+                <input class="campo_input" type="text" placeholder="Nombre completo..." id="nombre" name="nombre">
+            </div>
+            <div class="campo">
+                <label class="campo_label" for="sexo">Sexo:</label>
+                <select name="sexo" id="sexo">
+                    <option selected>-- Seleccionar --</option>
+                    <option>Hombre</option>
+                    <option>Mujer</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label class="campo_label" for="nacimiento">Fecha nacimiento:</label>
+                <input type="date" min="1920-01-01" max="2020-12-31" id="nacimiento" name="nacimiento">
             </div>
             <div class="campo">
                 <label class="campo_label" for="email">Email:</label>
-                <input class="campo_input" type="email" placeholder="joysticklibre@gmail.com" id="email">
+                <input class="campo_input" type="email" placeholder="joysticklibre@gmail.com" id="email" name="email">
             </div>
             <div class="campo">
                 <label class="campo_label" for="mensaje">Mensaje:</label>
-                <textarea class="campo_input campo_input--textarea" id="mensaje"></textarea>
+                <textarea class="campo_input campo_input--textarea" id="mensaje" name="mensaje" placeholder="Escribe tu mensaje acá..."></textarea>
+            </div>
+            <div class="campo">
+                <input type="checkbox" name="TerminosCondiciones">
+                <label for="TerminosCondiciones">He leido y acepto los terminos y condiciones del sitio web</label>
             </div>
             <div class="campo">
                 <input type="submit" value="Enviar" class="boton boton-verde">
@@ -73,6 +103,7 @@
                 <a href="nosotros.html">Nosotros</a>
                 <a href="reseñas.html">Reseñas</a>
                 <a href="opiniones.html">Opiniones</a>
+                <a href="armas.html">Armas</a>
                 <a href="contacto.html">Contactanos</a>
             </nav>
             <p class="copyright">Joystick Libre 2021 - Todos los Derechos Reservados &copy;</p>
@@ -93,5 +124,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/validacion_contacto.js"></script> <!-- Javascript de Validaciones -->
+    <script src="js/mensajes_es.js"></script> <!-- Javascript de Validaciones -->
 </body>
+
 </html>

@@ -383,7 +383,7 @@ img{
 }
 
 .campo_label{
-    flex: 0 0 9rem; /*factor de crecimiento 0
+    flex: 0 0 10rem; /*factor de crecimiento 0
                     tampoco se va a hacer más pequeño
                     el tamaño base sera de 9rem*/
 }
@@ -394,6 +394,61 @@ img{
 }
 
 .campo_input--textarea{
-    height: 20rem;
-    
+    height: 20rem; 
+}
+span.error{
+    color: #bd164e;
+    font-size: 1.2rem;
+}
+
+/** Armas **/
+.armas-bg{
+    background-image: url(../img/valorant2.jpg);
+    height: 50rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.arsenal{
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    margin: -10rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+.arsenal ul{
+    list-style: none;
+}
+.caja-info{
+    display: flex;
+}
+.selector{
+    display: flex;
+    justify-content: center;
+}
+.label_armas{
+    flex: 0 0 15rem; /*factor de crecimiento 0
+                    tampoco se va a hacer más pequeño
+                    el tamaño base sera de 9rem*/
+}
+.info-titulo{
+    color: #bd164e;
+    font-size: 3.4rem;
+}
+.img-arma{
+    height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.barra-buscar {
+    display: flex;
+    justify-content: center;
+}
+#btn-buscar-arma{
+    width: 90%;
+    background-color: #1ec7b0;
+}
+#btn-buscar-arma:hover{
+    background-color: #bd164e;
+    color: #4ddbc4;
 }
